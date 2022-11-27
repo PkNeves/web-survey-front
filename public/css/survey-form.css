@@ -90,6 +90,8 @@
   font-size: 2rem;
   color: white;
   border-radius: 34px;
+  padding-bottom: 7px;
+  padding-left: 1px;
 }
 
 .removeAnswer {
