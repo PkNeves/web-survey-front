@@ -1,4 +1,21 @@
 extends layout
 
+block style
+  link(rel="stylesheet", href="../public/css/survey-form.css")
+
+block script 
+  script(src="../../../../public/scripts/survey-form.js") 
+
 block main
-  p Bleh!
+  h1 My Surveys
+  p.description All your surveys stay here
+  
+  div.options_block
+    each survey in surveys
+      div.answer_block
+        span #{survey.name}
+        button(class="btn warning") Open
+        button(class="btn info") Get Link
+        button(class="btn danger") Delete
+    div
+      button(class="btn success" onclick="redirectCreateNewSurvey()") Create New
