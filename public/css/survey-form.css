@@ -165,3 +165,75 @@ input:checked + .slider:before {
   color: white;
   cursor: pointer;
 }
+
+.options_block {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.answer_count {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px 12px 20px;
+  margin: 10px;
+}
+
+.answer_block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  padding: 10px 20px 12px 20px;
+  margin: 10px;
+  background-color: rgba(210, 210, 210, 0.3);
+  border-radius: 50px;
+}
+
+.answer_block > input {
+  margin-top: 5px;
+}
+
+.status_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: rgba(210, 210, 210, 0.3);
+  border-radius: 50px;
+}
+
+.description {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.success {
+  background-color: #66bb6a;
+}
+
+.warning {
+  background-color: #bac063;
+}
+
+.info {
+  background-color: #777777;
+}
+
+.danger {
+  background-color: #f44336;
+}
