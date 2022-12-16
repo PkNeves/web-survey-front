@@ -48,3 +48,11 @@ function newAnswer() {
 
   return 'Ok, you\'ve won. You wanted a new answer, you got it.'
 }
+
+function redirectCreateNewSurvey() {
+  window.location.href="/surveys";
+}
+
+function listSurveys() {
+  window.location.href="/surveys/list";
+}
