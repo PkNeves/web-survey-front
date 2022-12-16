@@ -8,7 +8,8 @@ block script
 
 block main
   div.survey
-    form(id="survey-form" action="/surveys" method="POST")
+    button(class="btn warning" onclick="listSurveys()") Back to Surveys
+    form(id="survey-form" action="/surveys/list" method="POST")
       div.field
         input(
             type="text"
