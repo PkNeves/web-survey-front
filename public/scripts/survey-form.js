@@ -56,3 +56,7 @@ function redirectCreateNewSurvey() {
 function listSurveys() {
   window.location.href="/surveys/list";
 }
+
+function openSurvey(id) {
+  window.location.href=`/surveys/${id}`
+}

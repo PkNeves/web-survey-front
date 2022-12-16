@@ -14,7 +14,7 @@ block main
     each survey in surveys
       div.answer_block
         span #{survey.name}
-        button(class="btn warning") Open
+        button(class="btn warning" onclick="openSurvey(1)") Open
         button(class="btn info") Get Link
         button(class="btn danger") Delete
     div
