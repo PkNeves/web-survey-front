@@ -5,8 +5,9 @@ block style
 
 block main
   div.aligned
-    h1 Open Surveys
-    button(class="btn success" onclick="newSurvey()") New
+    h1 Questions
+    div.submit
+      button(class="btn success" onclick="newSurvey()") New
   
   div.options_block
     each survey in surveys
