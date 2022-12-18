@@ -3,6 +3,9 @@ extends layout
 block style
   link(rel="stylesheet", href="../public/css/survey-form.css")
 
+block script 
+  script(src="../../../../public/scripts/answers.js") 
+
 block main
   h1 #{name}
   p.description #{desc}
@@ -11,6 +14,7 @@ block main
   div.options_block
     each answer, index in answers
       div.answer_count
-        div.status_bar
-        span #{answer.name} 
+        div.status_bar  
+        div.percentage  
+        p #{answer.name} 
         span #{answer.count}

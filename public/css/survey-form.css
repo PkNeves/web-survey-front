@@ -210,6 +210,18 @@ input:checked + .slider:before {
   border-radius: 50px;
 }
 
+.percentage {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  padding: 5px;
+  background-color: rgba(121, 23, 156, 0.7);
+  border-radius: 50px;
+}
+
 .description {
   font-size: 12px;
   margin-bottom: 20px;
