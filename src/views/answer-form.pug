@@ -4,18 +4,19 @@ block style
   link(rel="stylesheet", href="../public/css/survey-form.css")
 
 block main
-  h1 #{name}
-  p.description #{desc}
-  h6 End Date: #{closeDate}
-  
-  div.options_block
-    form(id="survey-form" action="/"+id method="POST")
-      - var answer_type = chooseMany ? 'checkbox' : 'radio'
-
-      each answer in answers ? answers : []
-        div.answer_block
-          input(class="submit" type=answer_type name=answer.name id="?")
-          label(for="?") #{answer.name}
-
+  form(id="survey-form" action="/"+id method="POST")
+    div.aligned
+      h1 #{name}
       div.submit
-        input(class="submit" type="submit" value="Confirm!")
+        input(class="submit" type="submit" value="Answer!")
+
+    p.description #{desc}
+    h6 End Date: #{closeDate}
+    
+    div.options_block
+        - var answer_type = chooseMany ? 'checkbox' : 'radio'
+
+        each answer in answers ? answers : []
+          div.answer_block
+            input(class="submit" type=answer_type name=answer.name id="?")
+            label(for="?") #{answer.name}
