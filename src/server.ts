@@ -28,7 +28,7 @@ app.get("/all", (req, res) => {
 
 app.get("/:id", (req, res) => {
 	const survey = surveys.get(req.params.id);
-	res.render("answer-form", { ...survey });
+	res.render("answer-form", survey);
 });
 
 app.post("/:id", (req, res) => {
