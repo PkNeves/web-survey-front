@@ -3,14 +3,14 @@ export class Surveys {
 		{
 			id: "1",
 			name: "TEST QUESTION",
-			desc: "",
+			desc: "First test question",
 			chooseMany: true,
 			closeDate: "2022-12-14",
 			answers: [
-				{ name: "1", count: 0 },
-				{ name: "2", count: 0 },
-				{ name: "3", count: 0 },
-				{ name: "4", count: 0 },
+				{ name: "1", count: 6 },
+				{ name: "2", count: 2 },
+				{ name: "3", count: 5 },
+				{ name: "4", count: 9 },
 			],
 		},
 	];
