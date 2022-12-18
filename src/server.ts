@@ -2,6 +2,7 @@ import express from "express";
 import { Surveys } from "./Surveys";
 
 const app = express();
+const surveys = new Surveys();
 
 // View config
 app.set("view engine", "pug");
@@ -13,17 +14,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-const surveys = new Surveys();
-
-app.get("/", (req, res) => res.render("survey-form"));
-
-app.post("/", (req, res) => {
-	const id = surveys.create(req.body);
-	res.redirect(`/${id}`);
+app.get("/", (req, res) => {
+	res.render("surveys", { surveys: surveys.all() });
 });
 
-app.get("/all", (req, res) => {
-	res.render("surveys", { surveys: surveys.all() });
+app.get("/new", (req, res) => res.render("survey-form"));
+
+app.post("/new", (req, res) => {
+	const id = surveys.create(req.body);
+	res.redirect(`/${id}`);
 });
 
 app.get("/:id", (req, res) => {
