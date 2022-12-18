@@ -4,18 +4,18 @@ html(lang='pt')
         meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1')
         title Just Ask It
-
         link(rel="stylesheet", href="../public/css/layout.css")
         
         block style
 
     body
-        img(
-            src="../public/images/logo.png" 
-            alt="Just Ask It" 
-            class="logo"
-            width="600px"
-        )
+        a(href="/")
+            img(
+                src="../public/images/logo.png" 
+                alt="Just Ask It" 
+                class="logo"
+                width="600px"
+            )
 
         main
             block main 
@@ -31,4 +31,7 @@ html(lang='pt')
                 a(href="https://github.com/PkNeves") pkneves
 
         block script
+
+        script(src="../../../../public/scripts/redirects.js") 
+
 
