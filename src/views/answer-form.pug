@@ -1,0 +1,27 @@
+extends layout
+
+block style
+  link(rel="stylesheet", href="../public/css/survey-form.css")
+
+block main
+  h1 #{name}
+  p.description #{desc}
+  h6 End Date: #{closeDate}
+  
+  div.options_block
+    form(id="survey-form" action="/"+id method="POST")
+      div.field 
+        input(type="text" placeholder="your name" class="input")
+      if chooseMany
+        each answer, index in answers
+          div.answer_block
+            input(class="submit" type="checkbox" name=answer.name id="?")
+            label(for="?") #{answer.name}
+      else 
+        each answer in answers
+          div.answer_block
+            input(class="submit" type="radio" name=answer.name id="?")
+            label(for="?") #{answer.name}
+      
+      div.submit
+        input(class="submit" type="submit" value="Confirm!")

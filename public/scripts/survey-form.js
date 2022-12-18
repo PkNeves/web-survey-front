@@ -5,7 +5,7 @@ document
   .addEventListener('click', () => { 
     const input = document.createElement('input');
     input.type = 'text';
-    input.name = 'answer';
+    input.name = 'answers';
     input.className = 'input';
     input.placeholder = newAnswer();
 

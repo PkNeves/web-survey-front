@@ -9,7 +9,7 @@ block script
 block main
   div.survey
     button(class="btn warning" onclick="listSurveys()") Back to Surveys
-    form(id="survey-form" action="/surveys/list" method="POST")
+    form(id="survey-form" action="/" method="POST")
       div.field
         input(
             type="text"
@@ -33,7 +33,7 @@ block main
       div.field
         label(class="switch" for="checkbox") 
           div Can people give multiple answers?
-          input(type="checkbox" id="checkbox")
+          input(type="checkbox" name="chooseMany" id="checkbox")
           div(class="slider round")
 
       div.spaceBetween
