@@ -9,13 +9,18 @@ block script
 block main
   div.survey
     form(id="survey-form" action="/new" method="POST")
+      div.aligned
+        h1 New Survey 
+        div.submit
+          input(class="submit" type="submit" value="Create!")
+          
       div.field
         input(
-            type="text"
-            class="input"
-            name="name" 
-            placeholder="What question is on your mind?"
-          )
+          type="text"
+          class="input"
+          name="name" 
+          placeholder="What question is on your mind?"
+        )
 
       div.field
         input(
@@ -36,10 +41,7 @@ block main
           div(class="slider round")
 
       div.spaceBetween
-        h2 Create answer
+        h2 Add possible answers
         a(href="#" class="inlineBtn newAnswer") &plus;
 
       div.answers
-
-      div.submit
-        input(class="submit" type="submit" value="Create!")
